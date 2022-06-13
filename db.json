@@ -1,0 +1,274 @@
+{
+  "chef_service": [
+    {
+      "nom": "chef service 1",
+      "email": "Guest66@gmail.com",
+      "mobile": "85471263",
+      "role": "Chef Service",
+      "Departement": "RH",
+      "description": "slfkjqlksjf",
+      "id": 1
+    },
+    {
+      "nom": "chef service 4",
+      "email": "Guest85@gmail.com",
+      "mobile": "5898438",
+      "role": "Chef Service",
+      "Departement": "DAF",
+      "description": "eakrjeajoe",
+      "id": 2
+    },
+    {
+      "nom": "chef service 5",
+      "email": "GUest96@gmail.com",
+      "mobile": "85471236",
+      "role": "Chef Service",
+      "Departement": "Achats",
+      "description": "eakrjeajoe",
+      "id": 3
+    },
+    {
+      "nom": "chef service 6",
+      "email": "Guest966@gmail.com",
+      "mobile": "53788438",
+      "Departement": "Déploiement",
+      "role": "Ressource",
+      "description": "Lorem Ipsum",
+      "id": 4
+    }
+  ],
+  "employer_liste": [
+    {
+      "nom": "arezlm",
+      "prenom": "mklakmlkezlm",
+      "email": "jlejla66@gmail.com",
+      "mobile": "53788438",
+      "role": "Ressource",
+      "description": "eakrjeajoe",
+      "id": 14
+    },
+    {
+      "departement": "Achats",
+      "role": "Employer",
+      "prenom": "jlejla",
+      "nom": "Habib",
+      "email": "habib.jlejla@supcom.tn",
+      "mobile": "11427713",
+      "description": "ksjflkqjsflkqskllqsdflk",
+      "id": 15
+    },
+    {
+      "nom": "mahdi",
+      "prenom": "boudaouara",
+      "email": "m4hdyyy@gmail.com",
+      "mobile": "98938450",
+      "role": "Employer",
+      "departement": "Achats",
+      "description": "aaaa",
+      "id": 16
+    },
+    {
+      "nom": "mahdi",
+      "prenom": "boudaouara",
+      "email": "m4hdyyy@gmail.com",
+      "mobile": "98938450",
+      "role": "Client",
+      "departement": "RH",
+      "description": "cdcdcdcdd",
+      "id": 17
+    }
+  ],
+  "satisfaction_liste": [
+    {
+      "departement": "DAF",
+      "employers": 200,
+      "satisfaction": 15
+    },
+    {
+      "departement": "Ressources Humaines",
+      "employers": 200,
+      "satisfaction": 75
+    },
+    {
+      "departement": "Déploiment",
+      "employers": 100,
+      "satisfaction": 50
+    },
+    {
+      "departement": "R&D",
+      "employers": 100,
+      "satisfaction": 25
+    },
+    {
+      "departement": "Achats",
+      "employers": 300,
+      "satisfaction": 25
+    }
+  ],
+  "employer_liste_test": [
+    {
+      "nom": "Guest1",
+      "prenom": "Unknown2",
+      "email": "Guest66@gmail.com",
+      "mobile": "53788438",
+      "role": "goldfish",
+      "departement": "RH",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id": 1
+    },
+    {
+      "nom": "Guest2",
+      "prenom": "Unknown3",
+      "email": "Guest66@gmail.com",
+      "mobile": "53788438",
+      "role": "Employer",
+      "departement": "Achats",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id": 2
+    },
+    {
+      "nom": "Guest3",
+      "prenom": "Unknown4",
+      "email": "Guest66@gmail.com",
+      "mobile": "53788438",
+      "role": "Employer",
+      "departement": "RH",
+      "description": "decrie",
+      "id": 3
+    },
+    {
+      "nom": "Guest",
+      "prenom": "Unkown5",
+      "email": "Guest66@gmail.com",
+      "mobile": "53788438",
+      "role": "Ressource",
+      "departement": "DAF",
+      "description": "salut tout le monde ",
+      "id": 4
+    },
+    {
+      "nom": "Guest",
+      "prenom": "Unknown7",
+      "email": "Guest66@gmail.com",
+      "mobile": "53788438",
+      "role": "Ressource",
+      "departement": "DAF",
+      "description": "salut tout le monde ",
+      "id": 5
+    },
+    {
+      "nom": "Guest66",
+      "prenom": "Unknown8",
+      "email": "jlejla66@gmail.com",
+      "mobile": "53788438",
+      "role": "Ressource",
+      "departement": "DAF",
+      "description": "salut tout le monde ",
+      "id": 6
+    },
+    {
+      "nom": "Guest8",
+      "prenom": "Unknown9",
+      "email": "mahdi@supcom.tn",
+      "mobile": "56478963",
+      "role": "Ressource",
+      "departement": "RH",
+      "description": "mahdi is a good developer",
+      "id": 7
+    },
+    {
+      "nom": "guest",
+      "prenom": "guest",
+      "email": "guest@guest.com",
+      "mobile": "54879632",
+      "description": "Guest is a good employer",
+      "id": 8
+    }
+  ],
+  "reclamation_list": [
+    {
+      "id": 1,
+      "soumispar": "Guest85",
+      "statut": "A traiter",
+      "date": "10-10-2022",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Proprietaire": "chef service 1"
+    },
+    {
+      "id": 2,
+      "soumispar": "Guest66",
+      "statut": "A traiter",
+      "date": "05-08-2022",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Proprietaire": ""
+    },
+    {
+      "id": 3,
+      "soumispar": "Guest77",
+      "statut": "Urgent",
+      "date": "12-06-2022",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Proprietaire": "chef service 1"
+    },
+    {
+      "id": 4,
+      "soumispar": "Guest25",
+      "statut": "A traiter",
+      "date": "86-10-2022",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Proprietaire": ""
+    },
+    {
+      "id": 5,
+      "soumispar": "Guest32",
+      "statut": "A traiter",
+      "date": "05-02-2022",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Proprietaire": "Chef Service 2"
+    }
+  ],
+  "reclamation_statistic_client": [
+    {
+      "month": "January",
+      "data": 2
+    },
+    {
+      "month": "February",
+      "data": 30
+    },
+    {
+      "month": "March",
+      "data": 50
+    },
+    {
+      "month": "April",
+      "data": 30
+    },
+    {
+      "month": "May",
+      "data": 80
+    }
+  ],
+  "stat_departement": [
+    {
+      "month": "January",
+      "data": 2
+    },
+    {
+      "month": "February",
+      "data": 30
+    },
+    {
+      "month": "March",
+      "data": 50
+    },
+    {
+      "month": "April",
+      "data": 30
+    },
+    {
+      "month": "May",
+      "data": 80
+    }
+  ]
+}
