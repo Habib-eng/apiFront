@@ -45,18 +45,6 @@ export default function AdminSidebar() {
                   Employers
                 </NavLink>
               </li>
-              <li className='rounded-lg mb-2 '>
-                <NavLink
-                  to='/Admin/Ajout'
-                  className={(navData) =>
-                    !navData.isActive
-                      ? "flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
-                      : "flex items-center gap-4 text-sm  font-light px-4 py-3 rounded-lg bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
-                  }>
-                  <Icon name='add' size='2xl' />
-                  Ajouter vos employers
-                </NavLink>
-              </li>
             </ul>
           </div>
         </div>

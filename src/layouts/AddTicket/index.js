@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import axios from "axios";
@@ -16,7 +16,40 @@ import DataTable from "examples/Tables/DataTable";
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+async function addReclamation(data) {
+  return fetch('http://127.0.0.1:8000/api/reclamations', {
+    method: 'POST',
+    headers: {
+      'withCredentials' : 'true',
+      'Access-Control-Allow-Origin':'http://localhost:3000',
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  })
+    .then(data => {
+      data.json();
+      console.log(data);
+    })
+ }
+
 function AddTicket() {
+
+  const [nometprenom, setNometprenom] = useState();
+  const [title, setTitle] = useState();
+  const [departement, setDepartement] = useState();
+  const [description, setDescription] = useState();
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const result = await addReclamation({
+      nometprenom : nometprenom,
+      titre : title,
+      departement : departement,
+      description : description
+    });
+  }
+
   return (
     <DashboardLayout>
     <DashboardNavbar />
@@ -44,14 +77,14 @@ function AddTicket() {
   <Row className="mb-3">
     <Form.Group as={Col} controlId="formGridEmail">
       <Form.Label>Nom et prenom</Form.Label>
-      <Form.Control type="text" placeholder="Nom et prenom" />
+      <Form.Control type="text" onChange={e => setNometprenom(e.target.value)} placeholder="Nom et prenom" />
       <Form.Label>Ticket Title</Form.Label>
-      <Form.Control type="text" placeholder="Name Ticket" />
+      <Form.Control type="text" onChange={e => setTitle(e.target.value)} placeholder="Name Ticket" />
     </Form.Group>
     
     <Form.Group as={Col} controlId="formGridState">
       <Form.Label>Departement</Form.Label>
-      <Form.Select defaultValue="Choose...">
+      <Form.Select onChange={e => setDepartement(e.target.value)} defaultValue="Choose...">
         <option>Choose...</option>
         <option>R&D</option>
         <option>RH</option>
@@ -66,7 +99,7 @@ function AddTicket() {
   <Row className="mb-3">
     <Form.Group as={Col} controlId="formGridCity">
       <Form.Label>Description</Form.Label>
-      <Form.Control as="textarea" rows={3}  />
+      <Form.Control onChange={e => setDescription(e.target.value)} as="textarea" rows={3}  />
     </Form.Group>
 
   </Row>
@@ -79,7 +112,7 @@ function AddTicket() {
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
   </Row>
-  <Button variant="primary" type="submit" style={{marginBottom:"4%"}}>
+  <Button variant="primary" onClick={handleSubmit} type="button" style={{marginBottom:"4%"}}>
     Submit
   </Button>
 </Form></div>

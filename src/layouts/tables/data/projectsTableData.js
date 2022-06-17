@@ -23,8 +23,18 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
 import MDProgress from "components/MDProgress";
+import { useEffect, useState } from "react";
 
 export default function data() {
+  
+  const [ticketList, setTicketList] = useState([]);
+
+  useEffect(() => {
+    fetch('http://127.0.0.1:8000/api/myReclamations')
+    .then( (response) => response.json())
+    .then( (data) => setTicketList(data))
+  },[]);
+
   const Project = ({ image, name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
       <MDAvatar src={image} name={name} size="sm" variant="rounded" />
@@ -34,27 +44,9 @@ export default function data() {
     </MDBox>
   );
 
-  const Progress = ({ color, value }) => (
-    <MDBox display="flex" alignItems="center">
-      <MDTypography variant="caption" color="text" fontWeight="medium">
-        {value}%
-      </MDTypography>
-      <MDBox ml={0.5} width="9rem">
-        <MDProgress variant="gradient" color={color} value={value} />
-      </MDBox>
-    </MDBox>
-  );
-
-  return {
-    columns: [
-      { Header: "ticket", accessor: "ticket", width: "30%", align: "left" },
-      { Header: "start", accessor: "start", align: "left" },
-      { Header: "end", accessor: "end", align: "center" },
-      { Header: "progression", accessor: "progression", align: "center" },
-      { Header: "action", accessor: "action", align: "center" },
-    ],
-
-    rows: [
+  let rows = [];
+  ticketList.map((item) => {
+    rows.push(
       {
         ticket: <Project name="Ticket 1" />,
         start: (
@@ -66,109 +58,17 @@ export default function data() {
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
             working
           </MDTypography>
-        ),
-        progression: <Progress color="info" value={60} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
-        ),
-      },
-      {
-        ticket: <Project name="Ticket 2" />,
-        start: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $5,000
-          </MDTypography>
-        ),
-        end: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            done
-          </MDTypography>
-        ),
-        progression: <Progress color="success" value={100} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
-        ),
-      },
-      {
-        ticket: <Project name="Ticket 3" />,
-        start: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $3,400
-          </MDTypography>
-        ),
-        end: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            canceled
-          </MDTypography>
-        ),
-        progression: <Progress color="error" value={30} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
-        ),
-      },
-      {
-        ticket: <Project name="Ticket 4" />,
-        start: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $14,000
-          </MDTypography>
-        ),
-        end: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            working
-          </MDTypography>
-        ),
-        progression: <Progress color="info" value={80} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
-        ),
-      },
-      {
-        ticket: <Project name="Ticket 5" />,
-        start: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $1,000
-          </MDTypography>
-        ),
-        end: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            canceled
-          </MDTypography>
-        ),
-        progression: <Progress color="error" value={0} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
-        ),
-      },
-      {
-        ticket: <Project name="Ticket 6" />,
-        start: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $2,300
-          </MDTypography>
-        ),
-        end: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            done
-          </MDTypography>
-        ),
-        progression: <Progress color="success" value={100} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
-        ),
-      },
+        )
+      }
+    )
+  })
+  return {
+    columns: [
+      { Header: "ticket", accessor: "ticket", width: "30%", align: "left" },
+      { Header: "start", accessor: "start", align: "left" },
+      { Header: "end", accessor: "end", align: "center" },
+      { Header: "action", accessor: "action", align: "center" },
     ],
+    rows
   };
 }

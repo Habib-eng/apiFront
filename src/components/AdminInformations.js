@@ -31,28 +31,13 @@ const  AdminInformations=()=> {
 	// execute the code
 	useEffect(()=> {
 		fetch(
-    "http://127.0.0.1:8000/api/personnel")
+    "http://127.0.0.1:8000/api/employers")
 			.then((res) => res.json())
 			.then((json) => {
 				setItems(json);
                 setLoaded(true);
 			});
 	},[])
-    useEffect(()=> {
-		fetch(
-    "http://127.0.0.1:8000/api/reclamation")
-			.then((res) => res.json())
-			.then((json) => {
-				setStatsRH(json[1][0]);
-                setStatsDAF(json[1][1]);
-                setStatsPursh(json[1][2]);
-                setStatsRndD(json[1][3]);
-                setStatsDEP(json[1][4]);
-                setLoaded(true);
-			});
-	},[])
-	
-		
 		if (!dataisLoaded) return <div><h1> Pleses wait some time.... </h1> </div> ;
 		return (
 		<div className = "md:m-10">
@@ -133,17 +118,12 @@ const  AdminInformations=()=> {
                                     Email
                                 </th>
                                 <th className="px-2 text-teal-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
-                                    Mobile
-                                </th>
-                                <th className="px-2 text-teal-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
                                     Département
                                 </th>
                                 <th className="px-2 text-teal-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
                                     Role
                                 </th>
-                                <th className="px-2 text-teal-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
-                                    Description
-                                </th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -160,21 +140,15 @@ const  AdminInformations=()=> {
                         {item.email}
                     </td>
                     <td className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                        {item.mobile}
-                    </td>
-                    <td className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
                         {item.departement}
                     </td>
                     <td className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
                         {item.role}
                     </td>
-                    <td className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                        {item.description}
-                    </td>
                     <td>
                         <Button  
-                        onClick = {handleClick}
                         id = {item.id}
+                        onClick = {handleClick}
                         >
                         Supprimer
                         </Button> 
